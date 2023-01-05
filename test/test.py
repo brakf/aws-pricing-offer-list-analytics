@@ -26,7 +26,7 @@ r = requests.get(url)
 r.status_code
 csv_split = r.text.split("\n")[5:]
 csv = "\n".join(csv_split)
-f.open("/tmp/index.csv", "w")
+f = open("/tmp/index.csv", "w")
 f.write(csv)
 f.close()
 try:
